@@ -1,3 +1,5 @@
+import Data.List (sort)
+
 -- 再帰でソートする問題
 -- 始めはsort3で実装
 -- 汎用的なbubbleを実装
@@ -33,5 +35,5 @@ main = do
   -- let (a, b, c) = sort3 x y z
   -- putStrLn $ show a ++ " " ++ show b ++ " " ++ show c
   xs <- map (read :: String -> Int) . words <$> getLine
-  let ys = bubbleSort xs
+  let ys = sort xs
   putStrLn $ unwords $ map show ys

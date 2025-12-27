@@ -1,4 +1,6 @@
 -- 今まで学習した内容で解けた
+-- パターンマッチを使う
+--
 
 judgeOrdNum :: Int -> Int -> String
 judgeOrdNum x y
@@ -6,12 +8,11 @@ judgeOrdNum x y
   | otherwise = show y ++ " " ++ show x
 
 inputNums :: Int -> Int -> IO ()
-inputNums x y
-  | x == 0 && y == 0 = pure ()
-  | otherwise = do
-      putStrLn $ judgeOrdNum x y
-      [a, b] <- map (read :: String -> Int) . words <$> getLine
-      inputNums a b
+inputNums 0 0 = pure ()
+inputNums x y = do
+  putStrLn $ judgeOrdNum x y
+  [a, b] <- map (read :: String -> Int) . words <$> getLine
+  inputNums a b
 
 main :: IO ()
 main = do

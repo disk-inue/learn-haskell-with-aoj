@@ -4,10 +4,13 @@
 -- $は関数適用(括弧省略), <$>はFunctorの中身に関数を適用
 
 judgeNum :: Int -> Int -> String
-judgeNum a b
-  | a > b = "a > b"
-  | a < b = "a < b"
-  | otherwise = "a == b"
+judgeNum a b =
+  if a > b
+    then "a > b"
+    else
+      if a < b
+        then "a < b"
+        else "a == b"
 
 main :: IO ()
 main = do

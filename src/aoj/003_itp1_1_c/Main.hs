@@ -6,10 +6,10 @@
 -- showはStringにしてくれる
 main :: IO ()
 main = do
-  -- xyStr <- getLine
-  -- let [xStr, yStr] = words xyStr :: [String]
-  -- x = read xStr :: Int
-  -- y = read yStr :: Int
-  -- putStrLn (show (x * y) ++ " " ++ show (2 * (x + y)))
-  [x, y] <- map (read :: String -> Int) . words <$> getLine
-  putStrLn $ show (x * y) ++ " " ++ show (2 * (x + y))
+  xyStr <- getLine
+  case words xyStr of
+    (xStr : yStr : _) -> do
+      let x = read xStr :: Int
+          y = read yStr :: Int
+      putStrLn (show (x * y) ++ " " ++ show (2 * (x + y)))
+    _ -> error "Invalid error"
