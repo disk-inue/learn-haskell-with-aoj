@@ -1,3 +1,8 @@
+-- divが商、modが余り
+-- バッククォートで囲っているのは中置記法
+-- 本来はdiv a b, mod a b
+-- 数式のように読みやすくするためにこの記法
+-- readLnはIntの配列を入力から受け取れる
 main :: IO ()
 main = do
   -- inputSStr <- getLine

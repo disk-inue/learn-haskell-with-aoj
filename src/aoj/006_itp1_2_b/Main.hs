@@ -1,3 +1,4 @@
+-- 今までに学習したことで解けた
 judgeSorted :: Int -> Int -> Int -> String
 judgeSorted x y z
   | x < y && y < z = "Yes"

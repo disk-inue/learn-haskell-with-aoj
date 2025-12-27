@@ -1,3 +1,13 @@
+-- 再帰でソートする問題
+-- 始めはsort3で実装
+-- 汎用的なbubbleを実装
+-- (x :y :xs)は[1, 2, 3...]っていう配列の定義になる
+-- y : bubble(x:xs)は[2, 1, 3...]っていう配列
+-- bubble xs = xsは[],[1]の2つ以下の配列分岐
+-- case bubble xs of ysはbubble xsの結果をysに束縛している
+-- bubbleを汎用的にするとbubble :: Ord a => [a] -> [a]になる
+-- Ordは大小比較ができる型
+
 sort3 :: Int -> Int -> Int -> (Int, Int, Int)
 sort3 a b c
   | b < a = sort3 b a c

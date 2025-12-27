@@ -1,3 +1,5 @@
+-- 入力を受け続けて表示する問題
+
 printCase :: Int -> Int -> IO ()
 printCase inputCount inputNum
   | 0 == inputNum = pure ()

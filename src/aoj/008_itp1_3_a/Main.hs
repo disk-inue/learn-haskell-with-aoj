@@ -1,3 +1,8 @@
+-- ループ処理の問題
+-- pure()は何もしない関数
+-- return()は古いらしく今はpure()らしい
+-- カウントアップで始め実装したがカウントダウンがわかりやすかった
+
 -- printHello :: Int -> Int -> IO ()
 -- printHello nextCount maxCount
 --   | nextCount > maxCount = do
