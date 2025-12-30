@@ -1,3 +1,5 @@
+-- replicateの結合方法
+--
 printRow :: Bool -> Int -> String
 printRow True w = replicate w '#'
 printRow False w = "#" ++ replicate (w - 2) '.' ++ "#"
