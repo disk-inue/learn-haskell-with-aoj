@@ -1,0 +1,17 @@
+cradle:
+  multi:
+    - path: "app"
+      config:
+        cradle:
+          stack:
+            component: "learn-haskell-with-aoj:exe:aoj"
+    - path: "test"
+      config:
+        cradle:
+          stack:
+            component: "learn-haskell-with-aoj:test:aoj-test"
+    - path: "src"
+      config:
+        cradle:
+          direct:
+            arguments: []
